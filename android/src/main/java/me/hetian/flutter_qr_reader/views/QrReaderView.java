@@ -12,6 +12,7 @@ import com.google.zxing.client.android.camera.CameraManager;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Formatter;
 
 import io.flutter.plugin.common.MethodCall;
 import io.flutter.plugin.common.MethodChannel;
@@ -66,7 +67,7 @@ public class QrReaderView implements PlatformView, QRCodeReaderView.OnQRCodeRead
     }
 
     @Override
-    public void onQRCodeRead(String text, PointF[] points) {
+    public void onQRCodeRead(String text, PointF[] points, byte[] rawBytes) {
         HashMap<String, Object> rest = new HashMap<String, Object>();
         rest.put("text", text);
         ArrayList<String> poi = new ArrayList<String>();
@@ -74,6 +75,15 @@ public class QrReaderView implements PlatformView, QRCodeReaderView.OnQRCodeRead
             poi.add(point.x + "," + point.y);
         }
         rest.put("points", poi);
+
+        if (rawBytes != null && rawBytes.length > 0) {
+            Formatter formatter = new Formatter();
+            for (byte b : rawBytes) {
+                formatter.format("%02x", b);
+            }
+            rest.put("rawData", formatter.toString());
+            formatter.close();
+        }
         mMethodChannel.invokeMethod("onQRCodeRead", rest);
     }
 

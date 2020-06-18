@@ -97,7 +97,8 @@
         AVMetadataMachineReadableCodeObject *metadataObj = [metadataObjects objectAtIndex:0];
         if ([[metadataObj type] isEqualToString:AVMetadataObjectTypeQRCode]) {
             NSMutableDictionary *dic = [[NSMutableDictionary alloc] init];
-            [dic setObject:[metadataObj stringValue] forKey:@"text"];
+            [dic setObject:[metadataObj stringValue]?[metadataObj stringValue]:@"" forKey:@"text"];
+            [dic setObject:[metadataObj valueForKeyPath:@"_internal.basicDescriptor"][@"BarcodeRawData"] forKey:@"rawData"];
             [_channel invokeMethod:@"onQRCodeRead" arguments:dic];
             [self performSelectorOnMainThread:@selector(stopReading) withObject:nil waitUntilDone:NO];
             _isReading = NO;

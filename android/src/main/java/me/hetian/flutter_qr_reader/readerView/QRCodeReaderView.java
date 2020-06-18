@@ -58,7 +58,7 @@ public class QRCodeReaderView extends SurfaceView
 
     public interface OnQRCodeReadListener {
 
-        void onQRCodeRead(String text, PointF[] points);
+        void onQRCodeRead(String text, PointF[] points, byte[] rawBytes);
     }
 
     private OnQRCodeReadListener mOnQRCodeReadListener;
@@ -395,7 +395,7 @@ public class QRCodeReaderView extends SurfaceView
                 // Transform resultPoints to View coordinates
                 final PointF[] transformedPoints =
                         transformToViewCoordinates(view, result.getResultPoints());
-                view.mOnQRCodeReadListener.onQRCodeRead(result.getText(), transformedPoints);
+                view.mOnQRCodeReadListener.onQRCodeRead(result.getText(), transformedPoints, result.getRawBytes());
             }
         }
 

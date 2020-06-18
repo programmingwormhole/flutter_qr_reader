@@ -1,5 +1,5 @@
-name: flutter_qr_reader_example
-description: Demonstrates how to use the flutter_qr_reader plugin.
+name: flutter_qr_scan_example
+description: Demonstrates how to use the flutter_qr_scan plugin.
 publish_to: 'none'
 
 environment:
@@ -19,7 +19,7 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
 
-  flutter_qr_reader:
+  flutter_qr_scan:
     path: ../
 
 # For information on the generic Dart part of this file, see the

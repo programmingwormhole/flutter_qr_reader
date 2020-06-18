@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import 'package:flutter_qr_reader/flutter_qr_reader.dart';
-import 'package:flutter_qr_reader_example/scanViewDemo.dart';
+import 'package:flutter_qr_scan/flutter_qr_scan.dart';
+import 'package:flutter_qr_scan_example/scanViewDemo.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:permission_handler/permission_handler.dart';
 
@@ -35,6 +35,7 @@ class _HomePageState extends State<HomePage> {
   QrReaderViewController _controller;
   bool isOk = false;
   String data;
+  String rawData;
   @override
   void initState() {
     super.initState();
@@ -52,9 +53,11 @@ class _HomePageState extends State<HomePage> {
             FlatButton(
               onPressed: () async {
                 Map<PermissionGroup, PermissionStatus> permissions =
-                    await PermissionHandler().requestPermissions([PermissionGroup.camera]);
+                    await PermissionHandler()
+                        .requestPermissions([PermissionGroup.camera]);
                 print(permissions);
-                if (permissions[PermissionGroup.camera] == PermissionStatus.granted) {
+                if (permissions[PermissionGroup.camera] ==
+                    PermissionStatus.granted) {
                   showDialog(
                     context: context,
                     builder: (context) {
@@ -73,13 +76,15 @@ class _HomePageState extends State<HomePage> {
             ),
             FlatButton(
               onPressed: () async {
-                Navigator.push(context, MaterialPageRoute(builder: (context) => ScanViewDemo()));
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => ScanViewDemo()));
               },
               child: Text("独立UI"),
             ),
             FlatButton(
                 onPressed: () async {
-                  var image = await ImagePicker.pickImage(source: ImageSource.gallery);
+                  var image =
+                      await ImagePicker.pickImage(source: ImageSource.gallery);
                   if (image == null) return;
                   final rest = await FlutterQrReader.imgScan(image);
                   setState(() {
@@ -119,10 +124,11 @@ class _HomePageState extends State<HomePage> {
     );
   }
 
-  void onScan(String v, List<Offset> offsets) {
-    print([v, offsets]);
+  void onScan(String v, List<Offset> offsets, String rawData) {
+    print([v, offsets, rawData]);
     setState(() {
       data = v;
+      rawData = rawData;
     });
     _controller.stopCamera();
   }

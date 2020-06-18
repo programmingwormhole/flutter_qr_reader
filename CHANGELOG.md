@@ -26,3 +26,7 @@
 
 解决scanBoxRatio无效问题
 
+## 1.0.4
+
+Add Bytes/RawData reading
+
