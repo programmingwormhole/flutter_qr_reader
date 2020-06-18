@@ -1,35 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3a87769a-89a6-4354-9df7-388173d7db36" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_SDK.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_SDK.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Flutter_for_Android.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations/example_lib_main_dart.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+    <list default="true" id="3a87769a-89a6-4354-9df7-388173d7db36" name="Default Changelist" comment="add Bytes/RawData reading">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CHANGELOG.md" beforeDir="false" afterPath="$PROJECT_DIR$/CHANGELOG.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/java/me/hetian/flutter_qr_reader/readerView/QRCodeReaderView.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/java/me/hetian/flutter_qr_reader/readerView/QRCodeReaderView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/java/me/hetian/flutter_qr_reader/views/QrReaderView.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/java/me/hetian/flutter_qr_reader/views/QrReaderView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/android/gradle.properties" beforeDir="false" afterPath="$PROJECT_DIR$/example/android/gradle.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/ios/Podfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/example/ios/Podfile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/ios/Runner.xcodeproj/project.pbxproj" beforeDir="false" afterPath="$PROJECT_DIR$/example/ios/Runner.xcodeproj/project.pbxproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/ios/Runner.xcworkspace/xcshareddata/WorkspaceSettings.xcsettings" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/ios/Runner/Info.plist" beforeDir="false" afterPath="$PROJECT_DIR$/example/ios/Runner/Info.plist" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/example/lib/main.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/lib/scanViewDemo.dart" beforeDir="false" afterPath="$PROJECT_DIR$/example/lib/scanViewDemo.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/example/pubspec.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/example/pubspec.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/test/widget_test.dart" beforeDir="false" afterPath="$PROJECT_DIR$/example/test/widget_test.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Classes/QrReaderViewController.m" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Classes/QrReaderViewController.m" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/flutter_qr_reader.podspec" beforeDir="false" afterPath="$PROJECT_DIR$/ios/flutter_qr_scan.podspec" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/flutter_qr_reader.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/flutter_qr_scan.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/qrcode_reader_view.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/qrcode_reader_view.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -85,7 +58,19 @@
       <option name="presentableId" value="Default" />
       <updated>1592386961108</updated>
     </task>
+    <task id="LOCAL-00001" summary="add Bytes/RawData reading">
+      <created>1592464892188</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1592464892189</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="add Bytes/RawData reading" />
+    <option name="LAST_COMMIT_MESSAGE" value="add Bytes/RawData reading" />
   </component>
   <component name="WindowStateProjectService">
     <state x="2184" y="-158" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1592389086811">
@@ -100,10 +85,10 @@
       <screen x="1440" y="-540" width="2560" height="1440" />
     </state>
     <state x="2351" y="-92" width="737" height="559" key="#main.dart/0.0.1440.900/1440.-540.2560.1440@1440.-540.2560.1440" timestamp="1592389106860" />
-    <state x="1440" y="-540" width="2560" height="1440" key="CommitChangelistDialog2" timestamp="1592464382541">
+    <state x="1440" y="-540" width="2560" height="1440" key="CommitChangelistDialog2" timestamp="1592465323362">
       <screen x="1440" y="-540" width="2560" height="1440" />
     </state>
-    <state x="1440" y="-540" width="2560" height="1440" key="CommitChangelistDialog2/0.0.1440.900/1440.-540.2560.1440@1440.-540.2560.1440" timestamp="1592464382541" />
+    <state x="1440" y="-540" width="2560" height="1440" key="CommitChangelistDialog2/0.0.1440.900/1440.-540.2560.1440@1440.-540.2560.1440" timestamp="1592465323362" />
     <state width="2518" height="505" key="GridCell.Tab.0.bottom" timestamp="1592463898328">
       <screen x="1440" y="-540" width="2560" height="1440" />
     </state>
@@ -120,6 +105,10 @@
       <screen x="1440" y="-540" width="2560" height="1440" />
     </state>
     <state width="2518" height="505" key="GridCell.Tab.0.right/0.0.1440.900/1440.-540.2560.1440@1440.-540.2560.1440" timestamp="1592463898328" />
+    <state x="2320" y="-80" key="Vcs.Push.Dialog.v2" timestamp="1592464895742">
+      <screen x="1440" y="-540" width="2560" height="1440" />
+    </state>
+    <state x="2320" y="-80" key="Vcs.Push.Dialog.v2/0.0.1440.900/1440.-540.2560.1440@1440.-540.2560.1440" timestamp="1592464895742" />
     <state x="2390" y="12" key="com.intellij.ide.util.TipDialog" timestamp="1592452091135">
       <screen x="1440" y="-540" width="2560" height="1440" />
     </state>
@@ -128,5 +117,9 @@
       <screen x="1440" y="-540" width="2560" height="1440" />
     </state>
     <state x="2373" y="-63" width="694" height="486" key="find.popup/0.0.1440.900/1440.-540.2560.1440@1440.-540.2560.1440" timestamp="1592454926799" />
+    <state x="2385" y="62" key="run.anything.popup" timestamp="1592465250796">
+      <screen x="1440" y="-517" width="2560" height="1417" />
+    </state>
+    <state x="2385" y="62" key="run.anything.popup/0.23.1440.877/1440.-517.2560.1417@1440.-517.2560.1417" timestamp="1592465250796" />
   </component>
 </project>
