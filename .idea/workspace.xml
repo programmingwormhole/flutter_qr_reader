@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3a87769a-89a6-4354-9df7-388173d7db36" name="Default Changelist" comment="add Bytes/RawData reading">
+    <list default="true" id="c234b81c-dcc2-4874-9a61-ed4d23c0c257" name="Default Changelist" comment="error fix">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/example/pubspec.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flutter_qr_reader.iml" beforeDir="false" afterPath="$PROJECT_DIR$/flutter_qr_scan.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/qrcode_reader_view.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/qrcode_reader_view.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -10,22 +14,10 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExternalProjectsData">
-    <projectState path="$PROJECT_DIR$">
-      <ProjectState />
-    </projectState>
-  </component>
-  <component name="ExternalProjectsManager">
-    <system id="GRADLE">
-      <state>
-        <projects_view />
-      </state>
-    </system>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectId" id="1dRTZZf5JIuTyoaSeR0PE0IDOCU" />
+  <component name="ProjectId" id="1dUQc5YjlGRjs9qVmGYBZbmqu6e" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -37,12 +29,11 @@
     <property name="dart.analysis.tool.window.force.activate" value="false" />
     <property name="io.flutter.reload.alreadyRun" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="memory.settings.postsync.last.time.stamp" value="1592386961967" />
     <property name="settings.editor.selected.configurable" value="AndroidSdkUpdater" />
     <property name="show.migrate.to.gradle.popup" value="false" />
   </component>
   <component name="RunManager">
-    <configuration name="example.dart" type="FlutterRunConfigurationType" factoryName="Flutter">
+    <configuration name="main.dart" type="FlutterRunConfigurationType" factoryName="Flutter">
       <option name="filePath" value="$PROJECT_DIR$/example/lib/main.dart" />
       <method v="2" />
     </configuration>
@@ -52,74 +43,27 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="3a87769a-89a6-4354-9df7-388173d7db36" name="Default Changelist" comment="" />
-      <created>1592386961108</created>
+      <changelist id="c234b81c-dcc2-4874-9a61-ed4d23c0c257" name="Default Changelist" comment="" />
+      <created>1592477267452</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1592386961108</updated>
+      <updated>1592477267452</updated>
     </task>
-    <task id="LOCAL-00001" summary="add Bytes/RawData reading">
-      <created>1592464892188</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1592464892189</updated>
-    </task>
-    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="add Bytes/RawData reading" />
-    <option name="LAST_COMMIT_MESSAGE" value="add Bytes/RawData reading" />
+    <MESSAGE value="error fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="error fix" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="2184" y="-158" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1592389086811">
-      <screen x="1440" y="-540" width="2560" height="1440" />
-    </state>
-    <state x="2184" y="-158" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1440.900/1440.-540.2560.1440@1440.-540.2560.1440" timestamp="1592389086811" />
-    <state x="2351" y="-92" width="737" height="559" key="#example.dart" timestamp="1592389136303">
-      <screen x="1440" y="-540" width="2560" height="1440" />
-    </state>
-    <state x="2351" y="-92" width="737" height="559" key="#example.dart/0.0.1440.900/1440.-540.2560.1440@1440.-540.2560.1440" timestamp="1592389136303" />
-    <state x="2351" y="-92" width="737" height="559" key="#main.dart" timestamp="1592389106860">
-      <screen x="1440" y="-540" width="2560" height="1440" />
-    </state>
-    <state x="2351" y="-92" width="737" height="559" key="#main.dart/0.0.1440.900/1440.-540.2560.1440@1440.-540.2560.1440" timestamp="1592389106860" />
-    <state x="1440" y="-540" width="2560" height="1440" key="CommitChangelistDialog2" timestamp="1592465323362">
-      <screen x="1440" y="-540" width="2560" height="1440" />
-    </state>
-    <state x="1440" y="-540" width="2560" height="1440" key="CommitChangelistDialog2/0.0.1440.900/1440.-540.2560.1440@1440.-540.2560.1440" timestamp="1592465323362" />
-    <state width="2518" height="505" key="GridCell.Tab.0.bottom" timestamp="1592463898328">
-      <screen x="1440" y="-540" width="2560" height="1440" />
-    </state>
-    <state width="2518" height="505" key="GridCell.Tab.0.bottom/0.0.1440.900/1440.-540.2560.1440@1440.-540.2560.1440" timestamp="1592463898328" />
-    <state width="2518" height="505" key="GridCell.Tab.0.center" timestamp="1592463898327">
-      <screen x="1440" y="-540" width="2560" height="1440" />
-    </state>
-    <state width="2518" height="505" key="GridCell.Tab.0.center/0.0.1440.900/1440.-540.2560.1440@1440.-540.2560.1440" timestamp="1592463898327" />
-    <state width="2518" height="505" key="GridCell.Tab.0.left" timestamp="1592463898326">
-      <screen x="1440" y="-540" width="2560" height="1440" />
-    </state>
-    <state width="2518" height="505" key="GridCell.Tab.0.left/0.0.1440.900/1440.-540.2560.1440@1440.-540.2560.1440" timestamp="1592463898326" />
-    <state width="2518" height="505" key="GridCell.Tab.0.right" timestamp="1592463898328">
-      <screen x="1440" y="-540" width="2560" height="1440" />
-    </state>
-    <state width="2518" height="505" key="GridCell.Tab.0.right/0.0.1440.900/1440.-540.2560.1440@1440.-540.2560.1440" timestamp="1592463898328" />
-    <state x="2320" y="-80" key="Vcs.Push.Dialog.v2" timestamp="1592464895742">
-      <screen x="1440" y="-540" width="2560" height="1440" />
-    </state>
-    <state x="2320" y="-80" key="Vcs.Push.Dialog.v2/0.0.1440.900/1440.-540.2560.1440@1440.-540.2560.1440" timestamp="1592464895742" />
-    <state x="2390" y="12" key="com.intellij.ide.util.TipDialog" timestamp="1592452091135">
-      <screen x="1440" y="-540" width="2560" height="1440" />
-    </state>
-    <state x="2390" y="12" key="com.intellij.ide.util.TipDialog/0.0.1440.900/1440.-540.2560.1440@1440.-540.2560.1440" timestamp="1592452091135" />
-    <state x="2373" y="-63" width="694" height="486" key="find.popup" timestamp="1592454926799">
-      <screen x="1440" y="-540" width="2560" height="1440" />
-    </state>
-    <state x="2373" y="-63" width="694" height="486" key="find.popup/0.0.1440.900/1440.-540.2560.1440@1440.-540.2560.1440" timestamp="1592454926799" />
-    <state x="2385" y="62" key="run.anything.popup" timestamp="1592465250796">
+    <state x="1440" y="-517" width="2560" height="1417" key="CommitChangelistDialog2" timestamp="1592477645325">
       <screen x="1440" y="-517" width="2560" height="1417" />
     </state>
-    <state x="2385" y="62" key="run.anything.popup/0.23.1440.877/1440.-517.2560.1417@1440.-517.2560.1417" timestamp="1592465250796" />
+    <state x="2318" y="-220" key="CommitChangelistDialog2/0.0.1440.900/1440.-540.2560.1440@1440.-540.2560.1440" timestamp="1592477375387" />
+    <state x="1440" y="-517" width="2560" height="1417" key="CommitChangelistDialog2/0.23.1440.877/1440.-517.2560.1417@1440.-517.2560.1417" timestamp="1592477645325" />
+    <state x="2390" y="24" key="com.intellij.ide.util.TipDialog" timestamp="1592477571028">
+      <screen x="1440" y="-517" width="2560" height="1417" />
+    </state>
+    <state x="2390" y="24" key="com.intellij.ide.util.TipDialog/0.23.1440.877/1440.-517.2560.1417@1440.-517.2560.1417" timestamp="1592477571028" />
   </component>
 </project>

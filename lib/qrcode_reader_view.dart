@@ -122,14 +122,14 @@ class QrcodeReaderViewState extends State<QrcodeReaderView>
   Widget build(BuildContext context) {
     final flashOpen = Image.asset(
       "assets/tool_flashlight_open.png",
-      package: "flutter_qr_reader",
+      package: "flutter_qr_scan",
       width: 35,
       height: 35,
       color: Colors.white,
     );
     final flashClose = Image.asset(
       "assets/tool_flashlight_close.png",
-      package: "flutter_qr_reader",
+      package: "flutter_qr_scan",
       width: 35,
       height: 35,
       color: Colors.white,
@@ -216,7 +216,7 @@ class QrcodeReaderViewState extends State<QrcodeReaderView>
                       alignment: Alignment.center,
                       child: Image.asset(
                         "assets/tool_img.png",
-                        package: "flutter_qr_reader",
+                        package: "flutter_qr_scan",
                         width: 25,
                         height: 25,
                         color: Colors.white54,
@@ -233,7 +233,7 @@ class QrcodeReaderViewState extends State<QrcodeReaderView>
                     alignment: Alignment.center,
                     child: Image.asset(
                       "assets/tool_qrcode.png",
-                      package: "flutter_qr_reader",
+                      package: "flutter_qr_scan",
                       width: 35,
                       height: 35,
                       color: Colors.white54,
