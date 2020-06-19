@@ -30,3 +30,7 @@
 
 Add Bytes/RawData reading
 
+## 1.0.5
+
+fix image assets error
+
