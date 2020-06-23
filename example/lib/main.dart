@@ -104,7 +104,7 @@ class _HomePageState extends State<HomePage> {
                   _controller.startCamera(onScan);
                 },
                 child: Text("开始扫码（暂停后）")),
-            if (data != null) Text(data),
+            if (data != null) Text('$data\nrawData: $rawData'),
             if (isOk)
               Container(
                 width: 320,
@@ -124,11 +124,11 @@ class _HomePageState extends State<HomePage> {
     );
   }
 
-  void onScan(String v, List<Offset> offsets, String rawData) {
-    print([v, offsets, rawData]);
+  void onScan(String v, List<Offset> offsets, String raw) {
+    print([v, offsets, raw]);
     setState(() {
       data = v;
-      rawData = rawData;
+      rawData = raw;
     });
     _controller.stopCamera();
   }

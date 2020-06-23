@@ -34,3 +34,7 @@ Add Bytes/RawData reading
 
 fix image assets error
 
+## 1.0.6
+
+fix error on IOS
+

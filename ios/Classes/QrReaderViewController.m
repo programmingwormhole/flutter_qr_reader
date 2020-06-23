@@ -98,7 +98,32 @@
         if ([[metadataObj type] isEqualToString:AVMetadataObjectTypeQRCode]) {
             NSMutableDictionary *dic = [[NSMutableDictionary alloc] init];
             [dic setObject:[metadataObj stringValue]?[metadataObj stringValue]:@"" forKey:@"text"];
-            [dic setObject:[metadataObj valueForKeyPath:@"_internal.basicDescriptor"][@"BarcodeRawData"] forKey:@"rawData"];
+
+            NSData *rawData;
+            // If we're on ios11 then we can use `descriptor` to access the raw data of the barcode.
+            // If we're on an older version of iOS we're stuck using valueForKeyPath to peak at the
+            // data.
+            if (@available(iOS 11, *)) {
+                // descriptor is a CIBarcodeDescriptor which is an abstract base class with no useful fields.
+                // in practice it's a subclass, many of which contain errorCorrectedPayload which is the data we
+                // want. Instead of individually checking the class types, just duck type errorCorrectedPayload
+                if ([metadataObj.descriptor respondsToSelector:@selector(errorCorrectedPayload)]) {
+                    rawData = [metadataObj.descriptor performSelector:@selector(errorCorrectedPayload)];
+                }
+            } else {
+                rawData = [metadataObj valueForKeyPath:@"_internal.basicDescriptor.BarcodeRawData"];
+            }
+
+            // Now that we have the raw data of the barcode translate it into a hex string to pass to the channel
+            const unsigned char *dataBuffer = (const unsigned char *)[rawData bytes];
+            if (dataBuffer) {
+                NSMutableString     *rawDataHexString  = [NSMutableString stringWithCapacity:([rawData length] * 2)];
+                for (int i = 0; i < [rawData length]; ++i) {
+                    [rawDataHexString appendString:[NSString stringWithFormat:@"%02lx", (unsigned long)dataBuffer[i]]];
+                }
+                [dic setObject:[NSString stringWithString:rawDataHexString] forKey:@"rawData"];
+            }
+            
             [_channel invokeMethod:@"onQRCodeRead" arguments:dic];
             [self performSelectorOnMainThread:@selector(stopReading) withObject:nil waitUntilDone:NO];
             _isReading = NO;
