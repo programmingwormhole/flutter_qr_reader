@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'flutter_qr_scan.dart';
@@ -108,12 +109,12 @@ class QrcodeReaderViewState extends State<QrcodeReaderView>
 
   Future _scanImage() async {
     stopScan();
-    var image = await ImagePicker.pickImage(source: ImageSource.gallery);
+    var image = await ImagePicker().getImage(source: ImageSource.gallery);
     if (image == null) {
       startScan();
       return;
     }
-    final rest = await FlutterQrReader.imgScan(image);
+    final rest = await FlutterQrReader.imgScan(File(image.path));
     await widget.onScan(rest, '');
     startScan();
   }

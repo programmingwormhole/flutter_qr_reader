@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 
 import 'package:flutter_qr_scan/flutter_qr_scan.dart';
@@ -52,12 +54,9 @@ class _HomePageState extends State<HomePage> {
           children: <Widget>[
             FlatButton(
               onPressed: () async {
-                Map<PermissionGroup, PermissionStatus> permissions =
-                    await PermissionHandler()
-                        .requestPermissions([PermissionGroup.camera]);
-                print(permissions);
-                if (permissions[PermissionGroup.camera] ==
-                    PermissionStatus.granted) {
+                final status = await Permission.camera.request();
+                print(status);
+                if (status.isGranted) {
                   showDialog(
                     context: context,
                     builder: (context) {
@@ -84,9 +83,9 @@ class _HomePageState extends State<HomePage> {
             FlatButton(
                 onPressed: () async {
                   var image =
-                      await ImagePicker.pickImage(source: ImageSource.gallery);
+                      await ImagePicker().getImage(source: ImageSource.gallery);
                   if (image == null) return;
-                  final rest = await FlutterQrReader.imgScan(image);
+                  final rest = await FlutterQrReader.imgScan(File(image.path));
                   setState(() {
                     data = rest;
                   });
