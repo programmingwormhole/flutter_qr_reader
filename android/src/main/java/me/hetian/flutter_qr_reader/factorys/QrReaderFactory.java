@@ -9,19 +9,19 @@ import io.flutter.plugin.common.StandardMessageCodec;
 import io.flutter.plugin.platform.PlatformView;
 import io.flutter.plugin.platform.PlatformViewFactory;
 import me.hetian.flutter_qr_reader.views.QrReaderView;
+import io.flutter.plugin.common.BinaryMessenger;
 
 public class QrReaderFactory extends PlatformViewFactory {
+    BinaryMessenger messenger;
 
-    private PluginRegistry.Registrar registrar;
-
-    public QrReaderFactory(PluginRegistry.Registrar registrar) {
+    public QrReaderFactory(BinaryMessenger messenger) {
         super(StandardMessageCodec.INSTANCE);
-        this.registrar = registrar;
+        this.messenger = messenger;
     }
 
     @Override
     public PlatformView create(Context context, int id, Object args) {
         Map<String, Object> params = (Map<String, Object>) args;
-        return new QrReaderView(context, registrar, id, params);
+        return new QrReaderView(context,this.messenger, id, params);
     }
 }

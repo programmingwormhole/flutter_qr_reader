@@ -19,22 +19,21 @@ import io.flutter.plugin.common.MethodChannel;
 import io.flutter.plugin.common.PluginRegistry;
 import io.flutter.plugin.platform.PlatformView;
 import me.hetian.flutter_qr_reader.readerView.QRCodeReaderView;
+import io.flutter.plugin.common.BinaryMessenger;
 
 public class QrReaderView implements PlatformView, QRCodeReaderView.OnQRCodeReadListener, MethodChannel.MethodCallHandler {
 
     private final MethodChannel mMethodChannel;
     private final Context mContext;
     private Map<String, Object> mParams;
-    private PluginRegistry.Registrar mRegistrar;
     QRCodeReaderView _view;
 
     public static String EXTRA_FOCUS_INTERVAL = "extra_focus_interval";
     public static String EXTRA_TORCH_ENABLED = "extra_torch_enabled";
 
-    public QrReaderView(Context context, PluginRegistry.Registrar registrar, int id, Map<String, Object> params){
+    public QrReaderView(Context context,BinaryMessenger messenger, int id, Map<String, Object> params){
         this.mContext = context;
         this.mParams = params;
-        this.mRegistrar = registrar;
 
         // 创建视图
         int width = (int) mParams.get("width");
@@ -50,7 +49,7 @@ public class QrReaderView implements PlatformView, QRCodeReaderView.OnQRCodeRead
         _view.setTorchEnabled((boolean)mParams.get(EXTRA_TORCH_ENABLED));
 
         // 操作监听
-        mMethodChannel = new MethodChannel(registrar.messenger(), "me.hetian.flutter_qr_reader.reader_view_" + id);
+        mMethodChannel = new MethodChannel(messenger, "me.hetian.flutter_qr_reader.reader_view_" + id);
         mMethodChannel.setMethodCallHandler(this);
     }
 
@@ -63,7 +62,6 @@ public class QrReaderView implements PlatformView, QRCodeReaderView.OnQRCodeRead
     public void dispose() {
         _view = null;
         mParams = null;
-        mRegistrar = null;
     }
 
     @Override

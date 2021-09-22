@@ -11,20 +11,26 @@ import io.flutter.plugin.common.MethodChannel.MethodCallHandler;
 import io.flutter.plugin.common.MethodChannel.Result;
 import io.flutter.plugin.common.PluginRegistry.Registrar;
 import me.hetian.flutter_qr_reader.factorys.QrReaderFactory;
+import io.flutter.plugin.common.BinaryMessenger;
 
+import io.flutter.embedding.engine.plugins.FlutterPlugin;
+import io.flutter.embedding.engine.plugins.activity.ActivityAware;
+import io.flutter.embedding.engine.plugins.activity .ActivityPluginBinding;
 
 /** FlutterQrReaderPlugin */
-public class FlutterQrReaderPlugin implements MethodCallHandler {
+public class FlutterQrReaderPlugin implements FlutterPlugin,MethodCallHandler,ActivityAware {
+
+  static private MethodChannel channel;
+  static private FlutterPluginBinding flutterPluginBinding;
+
+
 
 //  private static final int REQUEST_CODE_CAMERA_PERMISSION = 3777;
   private static final String CHANNEL_NAME = "me.hetian.flutter_qr_reader";
   private static final String CHANNEL_VIEW_NAME = "me.hetian.flutter_qr_reader.reader_view";
 
 
-  private  Registrar registrar;
-
-  FlutterQrReaderPlugin(Registrar registrar) {
-    this.registrar = registrar;
+  public FlutterQrReaderPlugin() {
   }
 
 //  private interface PermissionsResult {
@@ -35,9 +41,47 @@ public class FlutterQrReaderPlugin implements MethodCallHandler {
   /** Plugin registration. */
   public static void registerWith(Registrar registrar) {
     final MethodChannel channel = new MethodChannel(registrar.messenger(), CHANNEL_NAME);
-    registrar.platformViewRegistry().registerViewFactory(CHANNEL_VIEW_NAME, new QrReaderFactory(registrar));
-    final FlutterQrReaderPlugin instance = new FlutterQrReaderPlugin(registrar);
-    channel.setMethodCallHandler(instance);
+    registrar.platformViewRegistry().registerViewFactory(CHANNEL_VIEW_NAME, new QrReaderFactory(registrar.messenger()));
+
+    FlutterQrReaderPlugin plugin = new FlutterQrReaderPlugin();
+    plugin.setup(registrar.messenger());
+  }
+
+  @Override
+  public void onAttachedToEngine(FlutterPluginBinding flutterPluginBinding) {
+    this.flutterPluginBinding = flutterPluginBinding;
+    setup(flutterPluginBinding.getBinaryMessenger());
+  }
+
+  @Override
+  public void onDetachedFromEngine(FlutterPluginBinding binding) {
+    channel.setMethodCallHandler(null);
+  }
+
+  @Override
+  public void onAttachedToActivity(ActivityPluginBinding binding) {
+    flutterPluginBinding.getPlatformViewRegistry().registerViewFactory(
+      CHANNEL_VIEW_NAME,
+        new QrReaderFactory(flutterPluginBinding.getBinaryMessenger()));
+  }
+
+  @Override
+  public void onDetachedFromActivity() {
+  }
+
+  @Override
+  public void onReattachedToActivityForConfigChanges(ActivityPluginBinding binding) {
+  }
+
+  @Override
+  public void onDetachedFromActivityForConfigChanges() {
+  }
+
+
+  private void setup(
+          final BinaryMessenger messenger) {
+    channel = new MethodChannel(messenger, CHANNEL_NAME);
+    channel.setMethodCallHandler(this);
   }
 
   @Override
