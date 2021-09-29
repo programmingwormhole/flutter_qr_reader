@@ -38,3 +38,7 @@ fix image assets error
 
 fix error on IOS
 
+## 1.0.7
+
+support null-safety.
+support flutter plugin v2.

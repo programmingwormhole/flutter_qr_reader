@@ -7,9 +7,8 @@
     <uses-feature android:name="android.hardware.camera.flash" />
 
 
-    <application
+    <!-- <application
         >
-        <!-- code omitted -->
         <activity android:name="io.flutter.embedding.android.FlutterActivity"
             android:theme="@style/LaunchTheme"
             android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale|layoutDirection|fontScale"
@@ -27,5 +26,5 @@
                 android:name="flutterEmbedding"
                 android:value="2" />
         </activity>
-    </application>
+    </application> -->
 </manifest>
